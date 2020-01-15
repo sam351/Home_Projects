@@ -1,0 +1,33 @@
+1. 기존 멤버 목록 복사해서, 'old_members.xlsx'에 저장
+   (맨 첫 줄 제목 순서에 잘 맞추도록 주의할 것!!!)
+
+
+2. 명령 프롬프트 실행해, selenium-server-standalone 폴더로 이동
+   → [ java -jar selenium-server-standalone-3.141.59.jar -port 4445 ] 입력
+   → 검은 화면 마지막 줄에 "Selenium Server is up and running on port 4445" 떴는지 확인
+   ( '2. selenium server run' 바로가기 파일의 시작위치 경로 수정해 사용 가능)
+
+
+3. 'Naver_load.R' 실행
+   → 위쪽 'Source' 버튼으로 전체 실행
+   → id, password 입력
+   (네이버 자동로그인 방지로 재로그인 요구하는 경우)
+   → 크롬 인터넷 창에서 비밀번호, 자동입력 방지문자 입력하고 다시 수동 로그인
+
+
+4. 'Naver_Form_crawl2csv.R' 실행
+   → 위쪽 'Source' 버튼으로 전체 실행
+   → 몇 번까지 수집할지 번호 입력(0 입력하면 10개 더 수집)
+   → 성별 정보 이상한 경우 직접 입력해 성별 결정
+   (중간에 실수한 경우, 중단하고 위쪽 'Source' 버튼 다시 클릭)
+
+
+5. 'final_df.xlsx' 파일 실행
+   → 첫 줄 제외하고 전체 복사
+   ( '5-2. new_df(검토용).csv' 파일에서 신규 멤버만 확인 가능 )
+
+
+6. 'output_form.xlsx' 파일 실행
+   → 전체 결과 붙여넣기
+      (Ctrl + Alt + V 에서 '값'만 붙여넣기) 또는 (오른쪽 클릭 > V)
+   → 다른 이름으로 저장 > '풋스타 비상연락망'으로 저장/덮어쓰기
